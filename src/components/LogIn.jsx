@@ -12,7 +12,7 @@ class LogIn extends Component {
     ],
   };
   checkAccount = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     var currentAcc = { name: this.state.accName, pass: this.state.accPass };
     const account = this.state.acc.filter((account) => {
       return (
@@ -20,6 +20,7 @@ class LogIn extends Component {
       );
     });
     if (account !== []) {
+      console.log(account);
       return <ToDoList />;
     }
   };
