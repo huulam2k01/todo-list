@@ -1,18 +1,16 @@
 import LogIn from "./components/LogIn";
-import { Route, Switch } from "react-router-dom";
-
-import LogIn from "./components/LogIn";
-function App() {
-  return (
-    <>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route path="/shop" component={Shop} />
-        <Route component={Error} />
-      </Switch>
-    </>
-  );
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Component } from "react";
+import ToDoList from "./components/ToDoList";
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Route exact path="/" component={LogIn} />
+        <Route path="/ToDoList" component={ToDoList} />
+      </Router>
+    );
+  }
 }
 
 export default App;
